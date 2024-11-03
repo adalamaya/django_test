@@ -1,0 +1,14 @@
+name: django_test:v1
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #image: django_test:v1
+    #container_name: django_container_with_compose
+    ports:
+      - "8001:8000"
+    volumes:
+     - .:/app
+
